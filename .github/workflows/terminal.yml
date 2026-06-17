@@ -1,0 +1,15 @@
+name: Live Terminal Setup
+
+on: 
+  workflow_dispatch: # Yeh aapko manually button dabakar start karne ka option dega
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04 # Purane kernels ke liye purana Ubuntu better rehta hai
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup tmate session (Live Terminal Access)
+      uses: mxschmitt/action-tmate@v3
